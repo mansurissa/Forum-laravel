@@ -6,5 +6,6 @@
 </head>
 <body>
     <h1>Hello PHP Laravel I'm going to be better at you no matter what.</h1>
+   <p>{{ $data }}</p>
 </body>
 </html>
