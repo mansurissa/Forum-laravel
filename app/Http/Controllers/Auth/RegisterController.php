@@ -22,11 +22,13 @@ class RegisterController extends Controller
         ]);
 
     User::create([
-        'name'=>$request->name,
+        'name'=>$request->name, 
         'username'=>$request->username,
         'email'=>$request->email,
         'password'=> Hash::make($request->password),
 
     ]);
+    auth()->attemp($request->only('email', 'password'));
+    return redirect()->route('dashboard');
     }
 }
