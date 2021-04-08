@@ -3,6 +3,10 @@
 @section('content')
     <div class="flex justify-center">
         <div class="w-4/12 p-6 bg-white rounded">
+            @if (session('status'))
+                {{ session('status') }}
+            @endif
+
             <form action="{{ route('login') }}" method="post">
                 @csrf
                 <div class="mb-4">

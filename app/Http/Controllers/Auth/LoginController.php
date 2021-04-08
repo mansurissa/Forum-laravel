@@ -8,14 +8,19 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     public  function index() {
-        return view('auth.login ');
+        return view('auth.login');
     }
   public  function store(Request $request) {
  
     $this->validate($request,[
-        'email'=>'required|max:255|email',
+        'email'=>'required |email',
         'password'=>'required'
         ]);
+
+   if(!auth()->attempt($request->only('email', 'password'))){
+        return  back()->with('status', "Invalid logn credentials");
+   }
+
     return redirect()->route('dashboard');
     }
 }

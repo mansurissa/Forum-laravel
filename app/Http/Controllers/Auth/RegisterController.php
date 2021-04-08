@@ -28,7 +28,7 @@ class RegisterController extends Controller
         'password'=> Hash::make($request->password),
 
     ]);
-    auth()->attemp($request->only('email', 'password'));
+    auth()->attempt($request->only('email', 'password'));
     return redirect()->route('dashboard');
     }
 }
