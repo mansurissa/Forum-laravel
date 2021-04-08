@@ -13,8 +13,6 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/posts', function () {
+    return view('posts.index');
 });
-Route::get('/test', [TestController::class, 'test']);
-Route::get('/phones/{name}', [TestController::class, 'index']);
