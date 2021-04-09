@@ -4,7 +4,9 @@
     <div class="flex justify-center">
         <div class="w-4/12 p-6 bg-white rounded">
             @if (session('status'))
-                {{ session('status') }}
+                <div class="text-white mb-4 p-3 bg-red-500 rounded text-center">
+                    {{ session('status') }}
+                </div>
             @endif
 
             <form action="{{ route('login') }}" method="post">

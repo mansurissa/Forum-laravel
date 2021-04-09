@@ -18,7 +18,7 @@ class LoginController extends Controller
         ]);
 
    if(!auth()->attempt($request->only('email', 'password'))){
-        return  back()->with('status', "Invalid logn credentials");
+        return  back()->with('status', "Invalid login credentials");
    }
 
     return redirect()->route('dashboard');

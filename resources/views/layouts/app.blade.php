@@ -21,7 +21,11 @@
         <ul class='flex items-center'>
             @auth
                 <li><a href="" class="p-3">Issa</a></li>
-                <li><a href="" class="p-3">Logout </a></li>
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <input type="submit" value="Logout" class="p-3 bg-transparent cursor-pointer">
+                </form>
+
 
             @endauth
             @guest
