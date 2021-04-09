@@ -29,10 +29,15 @@
                         </div>
                     @enderror
                 </div>
+                <div class="mb-4 flex items-center">
+                    <input type="checkbox" name="remember" id="remember" class=" mr-2 pt-1">
+                    <label for="remember">Remember me</label>
+                </div>
                 <div class="mb-4">
                     <input type="submit" name="submit" id="submit"
                         class="bg-blue-500 border-2 w-full p-4 rounded text-white text-xl" value="Login">
                 </div>
+
             </form>
         </div>
     </div>
