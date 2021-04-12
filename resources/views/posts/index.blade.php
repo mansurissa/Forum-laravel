@@ -19,6 +19,32 @@
                         class="bg-blue-500 border-2  p-4 rounded text-white text-xl" value="Post">
                 </div>
             </form>
+            <div>
+                @if ($posts->count())
+                    @foreach ($posts as $post)
+                        <div class="mb-3">
+                            <div class="flex items-center">
+                                <a href="" class=" mr-4 font-bold">{{ $post->user->name }}</a>
+                                <span class="text-gray-400 text-sm">{{ $post->created_at->diffForHumans() }}</span>
+                            </div>
+                            <p class="mb-1">{{ $post->body }}</p>
+                            <div class="flex items-center">
+                                <form action="" method="POST">
+                                    <button type="submit" class="text-blue-500">like</button>
+                                </form>
+                                <form action="" method="POST" class="ml-2">
+                                    <button type="submit" class="text-blue-500">Unlike</button>
+                                </form>
+                            </div>
+                        </div>
+                    @endforeach
+
+
+                    {{ $posts->links() }}
+                @else
+                    <p>No post yet</p>
+                @endif
+            </div>
         </div>
     </div>
 
