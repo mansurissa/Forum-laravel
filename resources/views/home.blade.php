@@ -2,7 +2,8 @@
 
 @section('content')
     <div class="flex justify-center">
-        <div class="w-6/12 p-6 bg-white rounded">Home</div>
+        <div class="w-8/12 bg-white p-6 rounded-lg">
+            Home
+        </div>
     </div>
-
 @endsection
