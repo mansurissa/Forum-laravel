@@ -1,10 +1,7 @@
-# Posty
+# Forum
 
-The code for the Posty project, from the Traversy Media Laravel crash course.
+### made with laravel
 
-Feel free to use this code however you like!
+---
 
-# Links
-
-* [Codecourse](https://codecourse.com)
-* [Traversy Media](https://www.youtube.com/user/TechGuyWeb)
+People can register, signin create a message ,like and like a message and they can delete their own message
